@@ -1,0 +1,53 @@
+:root {
+  --main-color: #9b5de5;
+  --accent-color: #f15bb5;
+  --light-bg: #f8f9fa;
+  --text-dark: #343a40;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--main-color), var(--accent-color));
+}
+
+.btn-primary {
+  background-color: var(--main-color) !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.text-primary {
+  color: var(--main-color) !important;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(155, 93, 229, 0.2);
+}
+
+.alert-primary {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
