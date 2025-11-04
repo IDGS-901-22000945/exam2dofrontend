@@ -1,21 +1,15 @@
 import { Link } from "react-router-dom";
-import Home from "../pages/Home";
-import Compras from "../pages/Compras";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand navbar-dark bg-warning shadow-md">
-      <div className="container">
+    <nav className="navbar bg-warning shadow-md py-3">
+      <div className="container d-flex justify-content-between align-items-center">
         <Link className="navbar-brand fw-bold text-white" to="/">
           Bazar Jaqueline
         </Link>
-
-        <div className="d-flex ms-auto gap-3">
-          <Link className="nav-link text-white d-flex align-items-center" to="/">
-            <Home size={18} className="me-1" /> Inicio
-          </Link>
-          <Link className="nav-link text-white d-flex align-items-center" to="/sales">
-            <Compras size={18} className="me-1" /> Compras
+        <div className="d-flex gap-3">
+          <Link className="btn btn-outline-light fw-semibold" to="/sales">
+            Compras
           </Link>
         </div>
       </div>
