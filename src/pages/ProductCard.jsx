@@ -1,6 +1,6 @@
 const ProductCard = ({ product }) => {
   return (
-    <div className="card h-100 border-0 shadow-sm hover-shadow-lg">
+    <div className="card h-100 border-0 shadow-sm">
       <img
         src={product.thumbnail || product.image}
         alt={product.title}
@@ -11,7 +11,10 @@ const ProductCard = ({ product }) => {
         <h5 className="card-title fw-semibold text-dark mb-2">
           {product.title}
         </h5>
-        <p className="card-text text-muted small mb-3" style={{ height: "40px", overflow: "hidden" }}>
+        <p
+          className="card-text text-muted small mb-3"
+          style={{ height: "40px", overflow: "hidden" }}
+        >
           {product.description}
         </p>
         <p className="fw-bold text-warning fs-5 mb-0">${product.price}</p>

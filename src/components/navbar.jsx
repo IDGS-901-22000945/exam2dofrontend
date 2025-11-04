@@ -4,17 +4,38 @@ import Compras from "../pages/Compras";
 
 const Navbar = () => {
   return (
-    <nav className="bg-yellow-400 p-4 shadow-md flex justify-between items-center">
-      <Link to="/" className="text-xl font-bold text-white">
-        Bazar Jaqueline
-      </Link>
-      <div className="flex gap-4">
-        <Link to="/" className="text-white flex items-center gap-1">
-          <Home size={18} /> Inicio
+    <nav className="navbar navbar-expand-lg navbar-dark bg-warning shadow-md">
+      <div className="container">
+        <Link className="navbar-brand fw-bold text-white" to="/">
+          Bazar Jaqueline
         </Link>
-        <Link to="/sales" className="text-white flex items-center gap-1">
-          <Compras size={18} /> Compras
-        </Link>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link text-white d-flex align-items-center" to="/">
+                <Home size={18} className="me-1" /> Inicio
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white d-flex align-items-center" to="/sales">
+                <Compras size={18} className="me-1" /> Compras
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

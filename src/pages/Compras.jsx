@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 const Compras = () => {
   const [compras, setCompras] = useState([]);
 
- useEffect(() => {
-  fetch("https://backend-exam-production-5d9d.up.railway.app/api/sales")
-    .then((res) => res.json())
-    .then(setCompras)
-    .catch(console.error);
-}, []);
+  useEffect(() => {
+    fetch("https://backend-exam-production-5d9d.up.railway.app/api/sales")
+      .then((res) => res.json())
+      .then(setCompras)
+      .catch(console.error);
+  }, []);
 
   return (
     <div className="container py-5">
-      <h2 className="fw-bold text-warning mb-4 d-flex align-items-center">
+      <h2 className="fw-bold text-warning mb-4 text-center text-md-start">
         Compras realizadas
       </h2>
 

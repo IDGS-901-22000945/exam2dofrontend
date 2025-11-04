@@ -53,7 +53,7 @@ const Resultados = () => {
   }
 
   return (
-    <div className="min-vh-100 py-5 px-4" style={{ backgroundColor: "#f8f6fa" }}>
+    <div className="min-vh-100 py-5 px-3 px-md-4" style={{ backgroundColor: "#f8f6fa" }}>
       <h2 className="fw-bold text-center mb-5" style={{ color: "#9b5de5" }}>
         Resultados para: <span style={{ color: "#f15bb5" }}>{query}</span>
       </h2>
@@ -64,7 +64,7 @@ const Resultados = () => {
         <div className="container">
           <div className="row g-4 justify-content-center">
             {products.map((p) => (
-              <div key={p.id} className="col-10 col-sm-6 col-md-4 col-lg-3">
+              <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
                 <Link to={`/items/${p.id}`} className="text-decoration-none text-dark">
                   <div
                     className="card border-0 shadow-sm h-100"
@@ -76,7 +76,7 @@ const Resultados = () => {
                     <img
                       src={p.thumbnail || p.image}
                       alt={p.title}
-                      className="card-img-top"
+                      className="card-img-top img-fluid"
                       style={{
                         height: "160px",
                         objectFit: "cover",

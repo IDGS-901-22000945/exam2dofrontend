@@ -22,30 +22,46 @@ const LayoutPublic = () => {
             El Bazar de Jaqueline
           </Link>
 
-          {showSearchBar && (
-            <form
-              onSubmit={handleSearch}
-              className="d-flex mx-auto w-50 justify-content-center"
-            >
-              <input
-                type="text"
-                placeholder="Buscar productos..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                className="form-control"
-              />
-              <button
-                type="submit"
-                className="btn btn-light text-primary fw-semibold ms-2"
-              >
-                Buscar
-              </button>
-            </form>
-          )}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-          <Link to="/sales" className="btn btn-outline-light fw-semibold">
-            Compras
-          </Link>
+          <div className="collapse navbar-collapse" id="navbarContent">
+            {showSearchBar && (
+              <form
+                onSubmit={handleSearch}
+                className="d-flex mx-auto my-2 my-lg-0 w-100 w-lg-50 justify-content-center"
+              >
+                <input
+                  type="text"
+                  placeholder="Buscar productos..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="form-control"
+                />
+                <button
+                  type="submit"
+                  className="btn btn-light text-primary fw-semibold ms-2"
+                >
+                  Buscar
+                </button>
+              </form>
+            )}
+
+            <div className="d-flex ms-auto mt-2 mt-lg-0">
+              <Link to="/sales" className="btn btn-outline-light fw-semibold">
+                Compras
+              </Link>
+            </div>
+          </div>
         </div>
       </nav>
 

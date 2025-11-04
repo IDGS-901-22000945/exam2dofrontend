@@ -11,7 +11,7 @@ const Home = () => {
   };
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center min-vh-100 bg-light">
+    <div className="d-flex flex-column justify-content-center align-items-center min-vh-100 bg-light px-3">
       <div className="text-center mb-5">
         <h1 className="fw-bold display-4" style={{ color: "#9b5de5" }}>
           Bazar Jaqueline
@@ -23,7 +23,7 @@ const Home = () => {
 
       <form
         onSubmit={handleSearch}
-        className="input-group w-75 w-md-50 shadow-sm"
+        className="input-group w-100 w-md-75 w-lg-50 shadow-sm"
       >
         <input
           type="text"
@@ -46,8 +46,8 @@ const Home = () => {
         </button>
       </form>
 
-      <p className="mt-4 fst-italic" style={{ color: "#9b5de5" }}>
-        Explora, elige y compra con un solo clic 
+      <p className="mt-4 fst-italic text-center" style={{ color: "#9b5de5" }}>
+        Explora, elige y compra con un solo clic
       </p>
     </div>
   );
